@@ -95,8 +95,12 @@ except ImportError:
 
 try:
   bytes()
+  long()
+  unicode()
 except NameError:
   bytes = str
+  long = int
+  unicode = str
 
 VERSION_MAJOR = PN_VERSION_MAJOR
 VERSION_MINOR = PN_VERSION_MINOR
